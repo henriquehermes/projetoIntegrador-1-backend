@@ -1,8 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 
 const app = express();
+app.use(cors());
 
 mongoose.connect(
   'mongodb+srv://admin:unisinos@clusterapi-v6fiw.mongodb.net/projetoIntegrador?retryWrites=true&w=majority',
