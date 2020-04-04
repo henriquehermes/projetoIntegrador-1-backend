@@ -26,4 +26,12 @@ module.exports = {
 
     return res.json(event);
   },
+
+  async delete(req, res) {
+    const result = await Event.findByIdAndDelete({
+      _id: req.params.id,
+    });
+
+    return res.json(result);
+  },
 };

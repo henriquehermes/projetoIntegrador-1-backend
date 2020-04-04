@@ -6,6 +6,7 @@ const routes = express.Router();
 
 routes.post('/event', EventController.store);
 routes.get('/events', EventController.index);
+routes.delete('/event/:id', EventController.delete);
 
 
 module.exports = routes;
